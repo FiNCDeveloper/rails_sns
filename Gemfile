@@ -17,7 +17,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -41,6 +41,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -62,3 +63,8 @@ gem 'bootstrap-sass'
 gem 'config'
 gem 'jquery-rails'
 gem 'unicorn'
+gem 'makara'
+gem 'clientoken', git: 'git@github.com:FiNCDeveloper/clientoken.git' 
+# Assets
+gem 'asset_sync'
+gem 'fog-aws'

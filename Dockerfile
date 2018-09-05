@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 RUN apt-get update && \
-    apt-get -y install git curl make openssl zlib1g-dev libssl-dev libreadline-dev sysv-rc-conf build-essential imagemagick libmagickwand-dev libmagickcore-dev mysql-client libmysqlclient-dev ssh xvfb zip awscli && \
+    apt-get -y install git curl make openssl zlib1g-dev libssl-dev libreadline-dev sysv-rc-conf build-essential imagemagick libmagickwand-dev libmagickcore-dev mysql-client libmysqlclient-dev ssh xvfb zip awscli pkg-config autoconf automake python3 python3-dev python3-venv openjdk-8-jdk-headless libxml2-dev libcurl4-openssl-dev libxslt1-dev re2c bison libbz2-dev libreadline-dev gettext libgettextpo-dev libicu-dev libmhash-dev libmcrypt-dev libgd-dev libtidy-dev && \
     useradd ubuntu -m -s /bin/bash -u 1000 && \
     /bin/echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
@@ -24,5 +24,9 @@ COPY middleware/docker/.ssh/authorized_keys /home/ubuntu/.ssh/authorized_keys
 RUN sudo chown ubuntu:ubuntu /home/ubuntu/.ssh/authorized_keys
 RUN /home/ubuntu/.rbenv/versions/2.5.0/bin/gem update --system 2.6.13
 ADD . /home/ubuntu/rails_sns
+WORKDIR /home/ubuntu/rails_sns
+RUN git clone https://github.com/tagomoris/xbuild.git
+RUN xbuild/go-install -f 1.9 /home/ubuntu/rails_sns/local/go
+ENV PATH=/home/ubuntu/rails_sns/local/go/bin:/home/ubuntu/rails_sns/go/bin:$PATH
 USER root
 RUN chown -R ubuntu:ubuntu /home/ubuntu/rails_sns

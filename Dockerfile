@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 RUN apt-get update && \
-    apt-get -y install git curl make openssl zlib1g-dev libssl-dev libreadline-dev sysv-rc-conf build-essential imagemagick libmagickwand-dev libmagickcore-dev mysql-client libmysqlclient-dev ssh xvfb zip awscli pkg-config autoconf automake openjdk-8-jdk-headless libxml2-dev libcurl4-openssl-dev libxslt1-dev re2c bison libbz2-dev libreadline-dev gettext libgettextpo-dev libicu-dev libmhash-dev libmcrypt-dev libgd-dev libtidy-dev && \
+    apt-get -y install git curl make openssl zlib1g-dev libssl-dev libreadline-dev sysv-rc-conf build-essential imagemagick libmagickwand-dev libmagickcore-dev mysql-client libmysqlclient-dev ssh xvfb zip awscli pkg-config autoconf automake libxml2-dev libcurl4-openssl-dev libxslt1-dev re2c bison libbz2-dev libreadline-dev gettext libgettextpo-dev libicu-dev libmhash-dev libmcrypt-dev libgd-dev libtidy-dev && \
     useradd ubuntu -m -s /bin/bash -u 1000 && \
     /bin/echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \

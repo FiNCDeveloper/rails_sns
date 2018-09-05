@@ -5,7 +5,7 @@ env.BRANCH_NAME_ESCAPE = env.JOB_NAME.split(/\//)[2]
 
 env.STAGING_DEPLOY_BRANCH = 'deploy/staging'
 env.PRODUCTION_DEPLOY_BRANCH = 'deploy/production'
-env.SLACK_CANNEL = '#times_kubota'
+env.SLACK_CANNEL = '#isucon8'
 
 env.ECS_TASK_NAME_PREFIX = 'RailsSns'
 env.ECS_CONTAINER_NAME = env.APP_NAME
@@ -30,7 +30,7 @@ env.PRODUCTION_BUILD_TOOLS_ABSOLUTE_PATH = '/home/finc/build_script/v2/master/'
 env.SKIP_TEST = 'true'
 
 env.DOCKERFILE_EXISTS = 'true'
-// env.BUILD_DOCKER_IMAGE='true'
+env.BUILD_DOCKER_IMAGE='true'
 
 // PATH need last /
 if (env.BUILD_TOOLS_ABSOLUTE_PATH.charAt(env.BUILD_TOOLS_ABSOLUTE_PATH.length()-1)!='/') {

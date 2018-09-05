@@ -26,6 +26,7 @@ RUN /home/ubuntu/.rbenv/versions/2.5.0/bin/gem update --system 2.6.13
 ADD . /home/ubuntu/rails_sns
 WORKDIR /home/ubuntu/rails_sns
 RUN git clone https://github.com/tagomoris/xbuild.git
+RUN chown -R ubuntu:ubuntu /home/ubuntu/rails_sns/local/go
 RUN xbuild/go-install -f 1.9 /home/ubuntu/rails_sns/local/go
 ENV PATH=/home/ubuntu/rails_sns/local/go/bin:/home/ubuntu/rails_sns/go/bin:$PATH
 USER root

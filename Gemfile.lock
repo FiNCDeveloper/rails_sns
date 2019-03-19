@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:FiNCDeveloper/clientoken.git
-  revision: b4077ea97b9672d4fa7df6fab0af5d781d8a83bb
+  revision: 669c77084ee867fbd78ffcb30f6da99a7b71489b
   branch: ryok-0319/authenticity-token
   specs:
     clientoken (0.2.2)

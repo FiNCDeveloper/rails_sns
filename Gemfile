@@ -65,7 +65,7 @@ gem 'config'
 gem 'jquery-rails'
 gem 'unicorn'
 gem 'makara'
-gem 'clientoken', git: 'git@github.com:FiNCDeveloper/clientoken.git', branch: "ryok-0319/version-up" 
+gem 'clientoken', git: 'git@github.com:FiNCDeveloper/clientoken.git', branch: "ryok-0319/authenticity-token" 
 # Assets
 gem 'asset_sync'
 gem 'fog-aws'

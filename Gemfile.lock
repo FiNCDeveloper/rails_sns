@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:FiNCDeveloper/clientoken.git
-  revision: 01e4699ed0590618b3d693fd9b0dbc8539aa94a4
-  branch: ryok-0319/version-up
+  revision: b4077ea97b9672d4fa7df6fab0af5d781d8a83bb
+  branch: ryok-0319/authenticity-token
   specs:
-    clientoken (0.2.1)
+    clientoken (0.2.2)
       aws-sdk-core (>= 3, < 4)
       aws-sdk-ssm (>= 1, < 2)
       faraday (< 1)
@@ -61,17 +61,18 @@ GEM
     ast (2.4.0)
     autoprefixer-rails (8.2.0)
       execjs
-    aws-eventstream (1.0.1)
-    aws-partitions (1.122.0)
-    aws-sdk-core (3.44.0)
-      aws-eventstream (~> 1.0)
+    aws-eventstream (1.0.2)
+    aws-partitions (1.144.0)
+    aws-sdk-core (3.48.0)
+      aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
-      aws-sigv4 (~> 1.0)
+      aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-ssm (1.34.0)
-      aws-sdk-core (~> 3, >= 3.39.0)
-      aws-sigv4 (~> 1.0)
-    aws-sigv4 (1.0.3)
+    aws-sdk-ssm (1.40.0)
+      aws-sdk-core (~> 3, >= 3.48.0)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.1.0)
+      aws-eventstream (~> 1.0, >= 1.0.2)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
@@ -146,7 +147,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.12.2)
+    faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.23)
     fog-aws (3.0.0)

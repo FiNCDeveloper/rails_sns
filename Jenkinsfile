@@ -5,7 +5,7 @@ env.BRANCH_NAME_ESCAPE = env.JOB_NAME.split(/\//)[2]
 
 env.STAGING_DEPLOY_BRANCH = 'deploy/staging'
 env.PRODUCTION_DEPLOY_BRANCH = 'deploy/production'
-env.SLACK_CANNEL = '#times_kubota'
+//env.SLACK_CANNEL = '#times_kubota'
 
 env.ECS_TASK_NAME_PREFIX = 'RailsSns'
 env.ECS_CONTAINER_NAME = env.APP_NAME
@@ -42,8 +42,8 @@ if (env.PRODUCTION_BUILD_TOOLS_ABSOLUTE_PATH.charAt(env.PRODUCTION_BUILD_TOOLS_A
 
 try {
   node('docker-slave-v2') {
-    stage 'Post to slack'
-    slackSend channel: env.SLACK_CANNEL, failOnError: true, message: "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'finc', token: 'WsXhb7wvZgvs8OAbIrtnmv7G'
+    //stage 'Post to slack'
+    //slackSend channel: env.SLACK_CANNEL, failOnError: true, message: "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'finc', token: 'WsXhb7wvZgvs8OAbIrtnmv7G'
 
     stage 'Checkout from github'
     git branch: env.BRANCH_NAME, credentialsId: 'adb4feb7-2b77-4007-a99c-218194fad175', url: env.GITHUB_REPO
@@ -51,10 +51,10 @@ try {
     stage 'Build & Deploy'
     sh (env.BUILD_TOOLS_ABSOLUTE_PATH + 'bin/please-pass-this-build-god')
 
-    stage 'Post to slack'
-    slackSend color: 'good', channel: env.SLACK_CANNEL, failOnError: true, message: "Completed ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'finc', token: 'WsXhb7wvZgvs8OAbIrtnmv7G'
+    //stage 'Post to slack'
+    //slackSend color: 'good', channel: env.SLACK_CANNEL, failOnError: true, message: "Completed ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'finc', token: 'WsXhb7wvZgvs8OAbIrtnmv7G'
   }
 } catch(e) {
-  slackSend color: 'danger', channel: env.SLACK_CANNEL, failOnError: true, message: "Failed ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'finc', token: 'WsXhb7wvZgvs8OAbIrtnmv7G'
-  throw e
+  //slackSend color: 'danger', channel: env.SLACK_CANNEL, failOnError: true, message: "Failed ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'finc', token: 'WsXhb7wvZgvs8OAbIrtnmv7G'
+  //throw e
 }

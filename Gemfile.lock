@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:FiNCDeveloper/clientoken.git
-  revision: 669c77084ee867fbd78ffcb30f6da99a7b71489b
-  branch: ryok-0319/authenticity-token
+  revision: aa75952d38b3ebd89984922ebea3850f2141c416
+  branch: ryok-0319/rails-env
   specs:
-    clientoken (0.2.2)
+    clientoken (0.3.0)
       aws-sdk-core (>= 3, < 4)
       aws-sdk-ssm (>= 1, < 2)
       faraday (< 1)
@@ -68,6 +68,13 @@ GEM
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
+    aws-sdk-kms (1.15.0)
+      aws-sdk-core (~> 3, >= 3.48.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.33.0)
+      aws-sdk-core (~> 3, >= 3.48.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.0)
     aws-sdk-ssm (1.40.0)
       aws-sdk-core (~> 3, >= 3.48.0)
       aws-sigv4 (~> 1.1)
@@ -349,6 +356,7 @@ PLATFORMS
 
 DEPENDENCIES
   asset_sync
+  aws-sdk-s3
   bootstrap-sass
   byebug
   capybara (~> 2.13)

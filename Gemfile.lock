@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:FiNCDeveloper/clientoken.git
-  revision: 070bc9eea1c852c3aa5fbbe660efaa536367dafa
+  revision: 7e3d6640c9f18fcd5bdd1187adaed064ee96f0e2
   branch: ryok-0319/rails-env
   specs:
     clientoken (0.3.0)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180523060635) do
+ActiveRecord::Schema.define(version: 20190419035630) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "email", default: "", null: false
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 20180523060635) do
     t.datetime "updated_at", null: false
     t.index ["application_name"], name: "index_clientoken_authorized_services_on_application_name", unique: true
     t.index ["application_token"], name: "index_clientoken_authorized_services_on_application_token", unique: true
+  end
+
+  create_table "clientoken_unauthorized_services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC" do |t|
+    t.string "application_name", null: false
+    t.datetime "invalid_until", null: false
+    t.string "application_token", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["application_name"], name: "index_clientoken_unauthorized_services_on_application_name"
+    t.index ["application_token"], name: "index_clientoken_unauthorized_services_on_application_token"
   end
 
   create_table "fav_to_replies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|

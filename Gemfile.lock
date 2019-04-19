@@ -1,3 +1,15 @@
+GIT
+  remote: git@github.com:FiNCDeveloper/clientoken.git
+  revision: b6a0878a8e9916f5a93b16c5140c281584227818
+  branch: ryok-0319/negative-cache
+  specs:
+    clientoken (0.4.0)
+      aws-sdk-core (>= 3, < 4)
+      aws-sdk-ssm (>= 1, < 2)
+      faraday (< 1)
+      faraday_middleware (< 1)
+      rails (>= 5.0.0, < 6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -63,6 +75,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.48.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
+    aws-sdk-ssm (1.40.0)
+      aws-sdk-core (~> 3, >= 3.48.0)
+      aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
     bcrypt (3.1.11)
@@ -137,6 +152,10 @@ GEM
     factory_bot_rails (4.8.2)
       factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.13.1)
+      faraday (>= 0.7.4, < 1.0)
     ffi (1.9.23)
     fog-aws (3.0.0)
       fog-core (~> 2.1)
@@ -194,6 +213,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
     mysql2 (0.4.10)
     nio4r (2.3.0)
     nokogiri (1.8.2)
@@ -340,6 +360,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara (~> 2.13)
+  clientoken!
   coffee-rails (~> 4.2)
   config
   devise

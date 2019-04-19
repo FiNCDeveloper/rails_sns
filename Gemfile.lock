@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:FiNCDeveloper/clientoken.git
-  revision: 7e3d6640c9f18fcd5bdd1187adaed064ee96f0e2
-  branch: ryok-0319/rails-env
+  revision: b6a0878a8e9916f5a93b16c5140c281584227818
+  branch: ryok-0319/negative-cache
   specs:
-    clientoken (0.3.0)
+    clientoken (0.4.0)
       aws-sdk-core (>= 3, < 4)
       aws-sdk-ssm (>= 1, < 2)
       faraday (< 1)

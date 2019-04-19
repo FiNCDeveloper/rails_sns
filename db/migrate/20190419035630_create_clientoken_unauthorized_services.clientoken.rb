@@ -8,7 +8,7 @@ class CreateClientokenUnauthorizedServices < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :clientoken_authorized_services, :application_name
-    add_index :clientoken_authorized_services, :application_token
+    add_index :clientoken_unauthorized_services, :application_name
+    add_index :clientoken_unauthorized_services, :application_token
   end
 end

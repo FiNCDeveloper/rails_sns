@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:FiNCDeveloper/clientoken.git
-  revision: 0f8ca3a84e71cc40c4d66ebaf6f83b4e4e4694cc
+  revision: b34fc4720194a3832b73e49ea72d09d6b507e3e8
   branch: ryok-0319/negative-cache
   specs:
     clientoken (0.4.0)
@@ -213,7 +213,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
-    multipart-post (2.0.0)
+    multipart-post (2.1.0)
     mysql2 (0.4.10)
     nio4r (2.3.0)
     nokogiri (1.8.2)

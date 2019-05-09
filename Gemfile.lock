@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:FiNCDeveloper/clientoken.git
-  revision: 06b289dfa920345ccf6ad8d7949ce23f53d7617c
+  revision: e84e90adaa46eea22f045bed12d1ec38dcdfea67
   branch: ryok-0319/negative-cache
   specs:
     clientoken (0.4.0)
